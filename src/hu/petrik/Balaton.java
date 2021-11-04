@@ -59,6 +59,29 @@ public class Balaton {
         }
     }
 
+
+    public int deliPartMax(){
+        int max = 0;
+        int sorIndex = 0;
+        boolean nullaE = true;
+        for (int i = this.sorokSzama-1; i > 0; i--) {
+            for (int j = this.oszlopokSzama-1; j > 0; j--) {
+                if (matrix[i][j] > 0 && nullaE){
+                    nullaE = false;
+                    sorIndex = i;
+                }
+            }
+        }
+
+        for (int i = 0; i < oszlopokSzama; i++) {
+            if (matrix[sorIndex][i] > max){
+                max = matrix[sorIndex][i];
+            }
+        }
+
+        return max;
+    }
+
     @Override
     public String toString() {
         String s = "";

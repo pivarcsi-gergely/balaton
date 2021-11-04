@@ -8,5 +8,6 @@ public class Main {
         Balaton b = new Balaton();
 
         System.out.println(b);
+        System.out.println(b.deliPartMax());
     }
 }
